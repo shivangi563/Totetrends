@@ -1,290 +1,1117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ToteTrends | Stylish Tote Bags</title>
+<title>ToteTrends — Carry Your Style</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description" content="Discover stylish, versatile and everyday tote bags at ToteTrends.">
 
-        body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: #f8f5f0;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        header {
-            background: #ffffff;
-            padding: 22px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+<style>
 
-        nav a {
-            text-decoration: none;
-            color: #222;
-            margin-left: 30px;
-            font-size: 15px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .hero {
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 70px 8%;
-            background: #eee7dc;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .hero-text {
-            max-width: 550px;
-        }
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #20201e;
+    background: #f7f3ed;
+}
 
-        .hero h1 {
-            font-size: 64px;
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
+/* NAVBAR */
 
-        .hero p {
-            font-size: 19px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+.navbar {
+    height: 78px;
+    background: #f7f3ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid #e5dfd6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 3px;
-            font-weight: bold;
-        }
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
 
-        .hero-image {
-            width: 42%;
-            height: 420px;
-            background: #d5c5b1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
+.logo span {
+    font-style: italic;
+}
 
-        .products {
-            padding: 80px 8%;
-            text-align: center;
-            background: white;
-        }
+.nav-links {
+    display: flex;
+    gap: 34px;
+    list-style: none;
+}
 
-        .products h2 {
-            font-size: 38px;
-            margin-bottom: 45px;
-        }
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.nav-links a:hover {
+    opacity: 0.5;
+}
 
-        .product {
-            background: #f7f4ef;
-            padding-bottom: 25px;
-        }
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 19px;
+}
 
-        .product-image {
-            height: 330px;
-            background: #ddd4c8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+.nav-icons span {
+    cursor: pointer;
+}
 
-        .product h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
+/* HERO */
 
-        .product p {
-            color: #666;
-        }
+.hero {
+    min-height: calc(100vh - 78px);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    overflow: hidden;
+}
 
-        .about {
-            padding: 90px 15%;
-            text-align: center;
-            background: #eee7dc;
-        }
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 8%;
+}
 
-        .about h2 {
-            font-size: 38px;
-            margin-bottom: 20px;
-        }
+.small-heading {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 22px;
+    color: #777;
+}
 
-        .about p {
-            font-size: 18px;
-            line-height: 1.8;
-        }
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 6vw, 92px);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
 
-        footer {
-            background: #222;
-            color: white;
-            padding: 35px;
-            text-align: center;
-        }
+.hero h1 em {
+    font-style: italic;
+}
 
-        @media (max-width: 768px) {
+.hero-text {
+    max-width: 470px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 35px;
+}
 
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+.shop-btn {
+    width: fit-content;
+    background: #20201e;
+    color: white;
+    text-decoration: none;
+    padding: 16px 31px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
 
-            nav a {
-                margin: 0 8px;
-            }
+.shop-btn:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
 
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                gap: 40px;
-            }
+.hero-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1200&q=85");
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+}
 
-            .hero h1 {
-                font-size: 45px;
-            }
+/* MARQUEE */
 
-            .hero-image {
-                width: 100%;
-            }
+.marquee {
+    background: #20201e;
+    color: white;
+    padding: 16px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.marquee-content {
+    display: inline-block;
+    animation: move 18s linear infinite;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* COLLECTION */
+
+.collection {
+    padding: 110px 7%;
+    background: #fff;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.view-all {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #222;
+    padding-bottom: 4px;
+    font-size: 13px;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product {
+    cursor: pointer;
+}
+
+.product-img {
+    height: 410px;
+    overflow: hidden;
+    background: #eee8df;
+    position: relative;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 7px 11px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-info {
+    padding-top: 17px;
+}
+
+.product-name {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #777;
+}
+
+/* STORY */
+
+.story {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 650px;
+}
+
+.story-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1100&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.story-content {
+    background: #ebe4d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 12%;
+}
+
+.story-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.story-content p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.text-link {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #222;
+    width: fit-content;
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+
+/* CATEGORIES */
+
+.categories {
+    padding: 105px 7%;
+    background: #fff;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.category:hover img {
+    transform: scale(1.05);
+}
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 50%, rgba(0,0,0,.6));
+    display: flex;
+    align-items: end;
+    padding: 30px;
+    color: white;
+}
+
+.category-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 85px 7%;
+    background: #f7f3ed;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 25px;
+    margin-bottom: 17px;
+}
+
+.feature h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* REVIEWS */
+
+.reviews {
+    padding: 110px 7%;
+    background: #20201e;
+    color: white;
+    text-align: center;
+}
+
+.reviews .section-label {
+    color: #aaa;
+}
+
+.reviews h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review {
+    border: 1px solid #444;
+    padding: 35px;
+}
+
+.stars {
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.review p {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.review strong {
+    font-size: 12px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    padding: 100px 7%;
+    text-align: center;
+    background: #ebe4d9;
+}
+
+.newsletter h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.email-box {
+    display: flex;
+    max-width: 480px;
+    margin: auto;
+}
+
+.email-box input {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: white;
+    font-family: inherit;
+    outline: none;
+}
+
+.email-box button {
+    border: none;
+    background: #20201e;
+    color: white;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background: #20201e;
+    color: white;
+    padding: 65px 7% 25px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 55px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    color: #999;
+    max-width: 300px;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.footer-column h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3c3c3c;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 11px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 80px 7%;
+    }
+
+    .hero-image {
+        min-height: 500px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image {
+        min-height: 500px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 38px;
+    }
+
+    .section-top {
+        display: block;
+    }
+
+    .view-all {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter h2 {
+        font-size: 38px;
+    }
+
+    .email-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .email-box button {
+        padding: 15px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">ToteTrends</div>
+<!-- NAVBAR -->
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header class="navbar">
+
+    <div class="logo">
+        Tote<span>Trends</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+        <span>⌕</span>
+        <span>♡</span>
+        <span>🛍</span>
+    </div>
+
+</header>
 
 
-    <section class="hero">
+<!-- HERO -->
 
-        <div class="hero-text">
+<section class="hero">
 
-            <h1>Carry Your Style.</h1>
+    <div class="hero-content">
 
-            <p>
-                Discover stylish and versatile tote bags
-                designed for everyday life.
-            </p>
-
-            <a href="#shop" class="button">Shop Collection</a>
-
+        <div class="small-heading">
+            The Everyday Edit
         </div>
 
-        <div class="hero-image">
-            Tote Bag Image
-        </div>
+        <h1>
+            Carry<br>
+            Your <em>Style.</em>
+        </h1>
 
-    </section>
-
-
-    <section class="products" id="shop">
-
-        <h2>Featured Tote Bags</h2>
-
-        <div class="product-grid">
-
-            <div class="product">
-
-                <div class="product-image">
-                    Tote Bag 01
-                </div>
-
-                <h3>Classic Everyday Tote</h3>
-
-                <p>Simple • Stylish • Versatile</p>
-
-            </div>
-
-
-            <div class="product">
-
-                <div class="product-image">
-                    Tote Bag 02
-                </div>
-
-                <h3>Minimal Canvas Tote</h3>
-
-                <p>Clean • Comfortable • Modern</p>
-
-            </div>
-
-
-            <div class="product">
-
-                <div class="product-image">
-                    Tote Bag 03
-                </div>
-
-                <h3>Trendy Statement Tote</h3>
-
-                <p>Bold • Fashionable • Unique</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="about" id="about">
-
-        <h2>About ToteTrends</h2>
-
-        <p>
-            ToteTrends is all about making everyday carrying
-            stylish, practical and effortless. Our collection
-            brings together modern designs that fit naturally
-            into your everyday lifestyle.
+        <p class="hero-text">
+            Thoughtfully designed tote bags for days
+            that don't slow down. Simple, stylish and
+            made to go wherever you do.
         </p>
 
-    </section>
+        <a href="#shop" class="shop-btn">
+            SHOP THE COLLECTION →
+        </a>
+
+    </div>
+
+    <div class="hero-image"></div>
+
+</section>
 
 
-    <footer id="contact">
+<!-- MARQUEE -->
 
-        <p>© 2026 ToteTrends. All Rights Reserved.</p>
+<div class="marquee">
+    <div class="marquee-content">
+        TOTE TRENDS ✦ EVERYDAY STYLE ✦ CARRY YOUR STORY ✦
+        TOTE TRENDS ✦ EVERYDAY STYLE ✦ CARRY YOUR STORY ✦
+        TOTE TRENDS ✦ EVERYDAY STYLE ✦ CARRY YOUR STORY ✦
+    </div>
+</div>
 
-    </footer>
+
+<!-- PRODUCTS -->
+
+<section class="collection" id="shop">
+
+    <div class="section-top">
+
+        <div>
+            <div class="section-label">Shop the edit</div>
+            <h2 class="section-title">Everyday Favorites</h2>
+        </div>
+
+        <a href="#" class="view-all">VIEW ALL PRODUCTS →</a>
+
+    </div>
+
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-img">
+                <span class="tag">Bestseller</span>
+
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=85">
+            </div>
+
+            <div class="product-info">
+                <div class="product-name">The Everyday Tote</div>
+                <div class="product-price">₹799</div>
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=700&q=85">
+
+            </div>
+
+            <div class="product-info">
+                <div class="product-name">Classic Canvas Tote</div>
+                <div class="product-price">₹899</div>
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                <span class="tag">New</span>
+
+                <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=700&q=85">
+
+            </div>
+
+            <div class="product-info">
+                <div class="product-name">The Statement Tote</div>
+                <div class="product-price">₹999</div>
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85">
+
+            </div>
+
+            <div class="product-info">
+                <div class="product-name">Minimal Daily Tote</div>
+                <div class="product-price">₹849</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BRAND STORY -->
+
+<section class="story" id="story">
+
+    <div class="story-image"></div>
+
+    <div class="story-content">
+
+        <div class="section-label">
+            Our philosophy
+        </div>
+
+        <h2>
+            More than a bag.<br>
+            It's your everyday statement.
+        </h2>
+
+        <p>
+            At ToteTrends, we believe the things you carry
+            should feel as good as they look. Our collection
+            brings together modern designs, everyday
+            functionality and effortless style.
+        </p>
+
+        <a href="#" class="text-link">
+            DISCOVER OUR STORY →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- COLLECTION CATEGORIES -->
+
+<section class="categories" id="collections">
+
+    <div class="section-top">
+
+        <div>
+            <div class="section-label">Find your style</div>
+            <h2 class="section-title">Shop by Collection</h2>
+        </div>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85">
+
+            <div class="category-overlay">
+                <h3>Everyday Totes</h3>
+            </div>
+
+        </div>
+
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=900&q=85">
+
+            <div class="category-overlay">
+                <h3>Minimal Totes</h3>
+            </div>
+
+        </div>
+
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=85">
+
+            <div class="category-overlay">
+                <h3>Statement Bags</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">✦</div>
+
+        <h3>Thoughtful Designs</h3>
+
+        <p>
+            Modern styles made for everyday life.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">♡</div>
+
+        <h3>Made for You</h3>
+
+        <p>
+            Comfortable and easy to carry all day.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">◌</div>
+
+        <h3>Quality First</h3>
+
+        <p>
+            Designed with everyday durability in mind.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">↗</div>
+
+        <h3>Easy Everyday Style</h3>
+
+        <p>
+            One bag. Endless outfits.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+    <div class="section-label">
+        Customer love
+    </div>
+
+    <h2>Loved by everyday explorers.</h2>
+
+
+    <div class="review-grid">
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The perfect everyday tote. It looks
+                stylish and fits everything I need."
+            </p>
+
+            <strong>— Aanya</strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "I love the minimal design. It goes
+                with almost every outfit I own."
+            </p>
+
+            <strong>— Riya</strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Beautiful, practical and exactly what
+                I was looking for."
+            </p>
+
+            <strong>— Mehak</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <div class="section-label">
+        Stay in the loop
+    </div>
+
+    <h2>Don't miss the next trend.</h2>
+
+    <p>
+        Get first access to new drops, collections and offers.
+    </p>
+
+    <form class="email-box">
+
+        <input
+            type="email"
+            placeholder="Your email address"
+            required
+        >
+
+        <button type="submit">
+            JOIN US
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                Tote<span>Trends</span>
+            </div>
+
+            <p>
+                Stylish tote bags designed for
+                your everyday adventures.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Shop</h4>
+
+            <a href="#">All Totes</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Bestsellers</a>
+            <a href="#">Collections</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>About</h4>
+
+            <a href="#">Our Story</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQs</a>
+            <a href="#">Shipping</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Follow</h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Facebook</a>
+            <a href="#">Email Us</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>© 2026 ToteTrends</span>
+
+        <span>Made for everyday style.</span>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.querySelector(".email-box").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    alert("Thank you for joining ToteTrends!");
+
+});
+
+</script>
 
 </body>
 </html>
