@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToteTrends | Stylish Tote Bags</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #f8f5f0;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 8%;
+            background: #eee7dc;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            width: 42%;
+            height: 420px;
+            background: #d5c5b1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .products {
+            padding: 80px 8%;
+            text-align: center;
+            background: white;
+        }
+
+        .products h2 {
+            font-size: 38px;
+            margin-bottom: 45px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: #f7f4ef;
+            padding-bottom: 25px;
+        }
+
+        .product-image {
+            height: 330px;
+            background: #ddd4c8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .product h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .product p {
+            color: #666;
+        }
+
+        .about {
+            padding: 90px 15%;
+            text-align: center;
+            background: #eee7dc;
+        }
+
+        .about h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ToteTrends</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Carry Your Style.</h1>
+
+            <p>
+                Discover stylish and versatile tote bags
+                designed for everyday life.
+            </p>
+
+            <a href="#shop" class="button">Shop Collection</a>
+
+        </div>
+
+        <div class="hero-image">
+            Tote Bag Image
+        </div>
+
+    </section>
+
+
+    <section class="products" id="shop">
+
+        <h2>Featured Tote Bags</h2>
+
+        <div class="product-grid">
+
+            <div class="product">
+
+                <div class="product-image">
+                    Tote Bag 01
+                </div>
+
+                <h3>Classic Everyday Tote</h3>
+
+                <p>Simple • Stylish • Versatile</p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">
+                    Tote Bag 02
+                </div>
+
+                <h3>Minimal Canvas Tote</h3>
+
+                <p>Clean • Comfortable • Modern</p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">
+                    Tote Bag 03
+                </div>
+
+                <h3>Trendy Statement Tote</h3>
+
+                <p>Bold • Fashionable • Unique</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h2>About ToteTrends</h2>
+
+        <p>
+            ToteTrends is all about making everyday carrying
+            stylish, practical and effortless. Our collection
+            brings together modern designs that fit naturally
+            into your everyday lifestyle.
+        </p>
+
+    </section>
+
+
+    <footer id="contact">
+
+        <p>© 2026 ToteTrends. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
